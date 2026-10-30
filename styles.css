@@ -40,11 +40,14 @@ hr {
     display: flex;
     flex-direction: column;
     width: 83%;
+    max-width: 325px;
     background-color: var(--cardbg);
 
     border-radius: 12px;
     justify-content: center;
     align-items: center;
+
+    box-shadow: 5px 10px 8px 15px hsl(218, 55%, 10%);
 }
 
 .img-wrapper {
