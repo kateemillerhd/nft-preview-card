@@ -47,16 +47,41 @@ hr {
     align-items: center;
 }
 
-.img-container {
+.img-wrapper {
+    position: relative;
     width: 85%;
     margin: 25px 25px 10px 25px;
 }
 
-.hero {
+.main-img {
     width: 100%;
     height: auto;
+    display: block;
 
     border-radius: 12px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    width: 100%;
+
+    border-radius: 12px;
+}
+
+.center-img {
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    opacity: 0;
+}
+
+.img-wrapper:hover .overlay,
+.img-wrapper:hover .center-img {
+    cursor: pointer;
+    opacity: 1;
 }
 
 .content {
@@ -76,6 +101,10 @@ h1 {
     font-weight: 500;
 }
 
+h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
 
 .description p {
     font-family: var(--outfit);
@@ -150,4 +179,9 @@ h1 {
 
 .footer span {
     color: var(--white);
+}
+
+span:hover {
+    color: var(--cyan);
+    cursor: pointer;
 }
